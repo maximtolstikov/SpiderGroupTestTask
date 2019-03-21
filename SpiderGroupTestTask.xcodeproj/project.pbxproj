@@ -8,19 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		469F0BF8FA9B3D10B72E562D /* Pods_SpiderGroupTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EE0D74B6FBE95F7CF71C60 /* Pods_SpiderGroupTestTask.framework */; };
+		946153592243C87F0080B0B7 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946153582243C87F0080B0B7 /* Configuration.swift */; };
+		946153602243D5800080B0B7 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461535C2243D5800080B0B7 /* ErrorParser.swift */; };
+		946153612243D5800080B0B7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461535D2243D5800080B0B7 /* NetworkService.swift */; };
+		946153622243D5800080B0B7 /* NetworkServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461535E2243D5800080B0B7 /* NetworkServiceImpl.swift */; };
+		946153632243D5800080B0B7 /* RequestRouterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461535F2243D5800080B0B7 /* RequestRouterEncoding.swift */; };
+		946153682243D5E00080B0B7 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946153672243D5E00080B0B7 /* NetworkError.swift */; };
+		9461536A2243D9180080B0B7 /* ErrorParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946153692243D9180080B0B7 /* ErrorParserImpl.swift */; };
+		946153722243DE340080B0B7 /* NetworkServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461536E2243DE340080B0B7 /* NetworkServiceFactory.swift */; };
 		94AA61732242855F007C5599 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AA61722242855F007C5599 /* AppDelegate.swift */; };
 		94AA617A22428561007C5599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94AA617922428561007C5599 /* Assets.xcassets */; };
 		94AA617D22428561007C5599 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94AA617B22428561007C5599 /* LaunchScreen.storyboard */; };
+		94F685FE2242AD3000D210AB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F685FD2242AD3000D210AB /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07EE0D74B6FBE95F7CF71C60 /* Pods_SpiderGroupTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpiderGroupTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1061280AEC78F79D0232A54C /* Pods-SpiderGroupTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiderGroupTestTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpiderGroupTestTask/Pods-SpiderGroupTestTask.release.xcconfig"; sourceTree = "<group>"; };
+		946153582243C87F0080B0B7 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		9461535C2243D5800080B0B7 /* ErrorParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
+		9461535D2243D5800080B0B7 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		9461535E2243D5800080B0B7 /* NetworkServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceImpl.swift; sourceTree = "<group>"; };
+		9461535F2243D5800080B0B7 /* RequestRouterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestRouterEncoding.swift; sourceTree = "<group>"; };
+		946153672243D5E00080B0B7 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		946153692243D9180080B0B7 /* ErrorParserImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParserImpl.swift; sourceTree = "<group>"; };
+		9461536E2243DE340080B0B7 /* NetworkServiceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceFactory.swift; sourceTree = "<group>"; };
 		94AA616F2242855F007C5599 /* SpiderGroupTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpiderGroupTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94AA61722242855F007C5599 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94AA617922428561007C5599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94AA617C22428561007C5599 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94AA617E22428561007C5599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94F685FD2242AD3000D210AB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CC653F7E63B1AFAFA17AB41C /* Pods-SpiderGroupTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiderGroupTestTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpiderGroupTestTask/Pods-SpiderGroupTestTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,9 +62,45 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9461535A2243CA590080B0B7 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		9461535B2243D5800080B0B7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9461535C2243D5800080B0B7 /* ErrorParser.swift */,
+				946153692243D9180080B0B7 /* ErrorParserImpl.swift */,
+				9461535D2243D5800080B0B7 /* NetworkService.swift */,
+				9461535E2243D5800080B0B7 /* NetworkServiceImpl.swift */,
+				9461535F2243D5800080B0B7 /* RequestRouterEncoding.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		946153662243D5E00080B0B7 /* AppError */ = {
+			isa = PBXGroup;
+			children = (
+				946153672243D5E00080B0B7 /* NetworkError.swift */,
+			);
+			path = AppError;
+			sourceTree = "<group>";
+		};
+		9461536B2243DE340080B0B7 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				9461536E2243DE340080B0B7 /* NetworkServiceFactory.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		94AA61662242855F007C5599 = {
 			isa = PBXGroup;
 			children = (
+				94F685FD2242AD3000D210AB /* Default-568h@2x.png */,
 				94AA61712242855F007C5599 /* SpiderGroupTestTask */,
 				94AA61702242855F007C5599 /* Products */,
 				B8157E45EF9DE438574BCF95 /* Pods */,
@@ -78,6 +132,7 @@
 			children = (
 				94F685FC2242A85B00D210AB /* AppDelegate */,
 				94F685FA2242A7EF00D210AB /* BussinessLogic */,
+				9461535A2243CA590080B0B7 /* Entities */,
 				94F685FB2242A84700D210AB /* Flows */,
 			);
 			path = App;
@@ -87,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				94AA617E22428561007C5599 /* Info.plist */,
-				94AA617B22428561007C5599 /* LaunchScreen.storyboard */,
+				946153582243C87F0080B0B7 /* Configuration.swift */,
 			);
 			path = Environment;
 			sourceTree = "<group>";
@@ -95,6 +150,8 @@
 		94F685F82242A7C300D210AB /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				946153662243D5E00080B0B7 /* AppError */,
+				9461535B2243D5800080B0B7 /* Network */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -102,6 +159,7 @@
 		94F685F92242A7CD00D210AB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				94AA617B22428561007C5599 /* LaunchScreen.storyboard */,
 				94AA617922428561007C5599 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -124,6 +182,7 @@
 		94F685FC2242A85B00D210AB /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				9461536B2243DE340080B0B7 /* Assembly */,
 				94AA61722242855F007C5599 /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
@@ -200,6 +259,7 @@
 			files = (
 				94AA617D22428561007C5599 /* LaunchScreen.storyboard in Resources */,
 				94AA617A22428561007C5599 /* Assets.xcassets in Resources */,
+				94F685FE2242AD3000D210AB /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				946153592243C87F0080B0B7 /* Configuration.swift in Sources */,
+				9461536A2243D9180080B0B7 /* ErrorParserImpl.swift in Sources */,
+				946153682243D5E00080B0B7 /* NetworkError.swift in Sources */,
+				946153602243D5800080B0B7 /* ErrorParser.swift in Sources */,
+				946153612243D5800080B0B7 /* NetworkService.swift in Sources */,
+				946153632243D5800080B0B7 /* RequestRouterEncoding.swift in Sources */,
+				946153722243DE340080B0B7 /* NetworkServiceFactory.swift in Sources */,
+				946153622243D5800080B0B7 /* NetworkServiceImpl.swift in Sources */,
 				94AA61732242855F007C5599 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,7 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X37P9Q6XJN;
-				INFOPLIST_FILE = SpiderGroupTestTask/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SpiderGroupTestTask/Environment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -400,7 +468,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.hopto.tolstikov.SpiderGroupTestTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -411,7 +479,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X37P9Q6XJN;
-				INFOPLIST_FILE = SpiderGroupTestTask/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SpiderGroupTestTask/Environment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -419,7 +487,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.hopto.tolstikov.SpiderGroupTestTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
