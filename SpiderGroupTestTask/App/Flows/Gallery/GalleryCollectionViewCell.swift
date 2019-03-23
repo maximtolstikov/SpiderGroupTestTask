@@ -9,27 +9,21 @@ import Alamofire
 import AlamofireImage
 import UIKit
 
+/// Ячейка галлереи
 class GalleryCollectionViewCell: UICollectionViewCell {
-    
-    // MARK: - Custom types
+
     // MARK: - Identifiers
     
     static let reuseId = "GalleryCollectionViewCell"
-    
-    // MARK: - Constants
-    // MARK: - Dependency
     
     // MARK: - IBOutlets
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var title: UILabel!
-    
-    // MARK: - Public properties
-    // MARK: - Private properties
-    
-    // MARK: - Init
+
     // MARK: - Cell lifecycle
     
+    /// Настраивает внешний вид ячейки
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -42,32 +36,19 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Configure cell
     
+    /// Конфигурирует ячейку
+    ///
+    /// - Parameter item: изображение из галлереи
     public func confiruge(item: GallerysItem) {
+        title.text = ""
+        image.image = nil
         title.text = item.title
         
         if let gallerysImage = item.images?.first,
-            let url = URL(string: gallerysImage.link) {
-            image.af_setImage(withURL: url)
+            let url = URL(string: gallerysImage.link),
+            let placeholderImage = UIImage(named: "placeholder") {
+            image.af_setImage(withURL: url, placeholderImage: placeholderImage)
         }
     }
-    
-    
-    // MARK: - Public IBAction
-    
-    // MARK: - Private methods
 
-    
-//    private func initWithXib() {
-//        Bundle.main.loadNibNamed("GalleryCollectionViewCell", owner: self, options: nil)
-//        contentView.addSubview(xib)
-//        xib.frame = self.bounds
-//        xib.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//    }
-    
-    // MARK: - Private IBAction
-    // MARK: - Navigation
-    // MARK: - UITableViewDataSource
-    // MARK: - UITableViewDelegate
-
-    
 }

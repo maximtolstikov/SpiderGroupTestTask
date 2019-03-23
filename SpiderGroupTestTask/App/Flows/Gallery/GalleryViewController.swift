@@ -7,6 +7,7 @@
 //
 import UIKit
 
+/// Контроллер Галлереи изображений
 class GalleryViewController: UIViewController {
     
     // MARK: - Custom types
@@ -27,7 +28,7 @@ class GalleryViewController: UIViewController {
         super.viewDidLoad()
         
         configureController()
-        loadStartImages()
+        loadImages()
     }
     
     // MARK: - Configure controller
@@ -38,25 +39,24 @@ class GalleryViewController: UIViewController {
     }
     
     private func addCollectionView() {
-        galleryCollectionView = GalleryCollectionView(frame: view.bounds)
+        galleryCollectionView = GalleryCollectionView(
+            frame: view.bounds,
+            controller: self)
         galleryCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.addSubview(galleryCollectionView)
     }
     
     // MARK: - Public methods
-    // MARK: - Public IBAction
     
-    // MARK: - Private methods
-    
-    private func loadStartImages() {
-        service?.fetch(page: page.next(), completion: { [weak self] (response, error) in
+    public func loadImages() {
+        service?.fetch(page: page.next(), completion: { [weak self] (items, error) in
             
-            guard error == nil, let response = response else {
+            guard error == nil, let items = items else {
                 let networkError = error as! NetworkError
                 print(networkError.description)
                 return
             }
-            self?.galleryCollectionView.cells = response.data
+            self?.galleryCollectionView.cells.append(contentsOf: items)
         })
     }
 

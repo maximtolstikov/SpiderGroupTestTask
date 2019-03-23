@@ -14,7 +14,7 @@ import Alamofire
 
 protocol GalleryService {
     
-    typealias CompletionGetGallerysImage = (GalleryResponse?, Error?) -> Void
+    typealias CompletionGetGallerysImage = ([GallerysItem]?, Error?) -> Void
     
     func fetch(page: Int, completion: @escaping CompletionGetGallerysImage)
 }
@@ -46,7 +46,9 @@ class GalleryServiceImpl: GalleryService {
         
         networkService.request(request) {
             (response: GalleryResponse?, error: Error?) in
-            completion(response, error)
+            let galeryItems = response?.data
+                .filter { $0.images?.first?.type == Configuration().imageType}
+            completion(galeryItems, error)
             
         }
     }

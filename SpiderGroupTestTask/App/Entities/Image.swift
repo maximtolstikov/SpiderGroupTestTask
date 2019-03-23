@@ -9,6 +9,7 @@
 struct Image: Codable {
     
     let id: String
+    let type: String
     let title: String?
     let link: String
 }

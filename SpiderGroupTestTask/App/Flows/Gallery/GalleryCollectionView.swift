@@ -9,12 +9,7 @@
 import UIKit
 
 class GalleryCollectionView: UICollectionView {
-    
-    // MARK: - Custom types
-    // MARK: - Identifiers
-    // MARK: - Constants
-    // MARK: - Dependency
-    // MARK: - IBOutlets
+
     // MARK: - Public properties
     
     var cells = [GallerysItem]() {
@@ -25,9 +20,13 @@ class GalleryCollectionView: UICollectionView {
     
     // MARK: - Private properties
     
+    private let controller: GalleryViewController
+    private var fetchingMore = false
+    
     // MARK: - Init
     
-    init(frame: CGRect) {
+    init(frame: CGRect, controller: GalleryViewController) {
+        self.controller = controller
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         super.init(frame: frame, collectionViewLayout: layout)
@@ -43,29 +42,32 @@ class GalleryCollectionView: UICollectionView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - ViewController lifecycle
-    // MARK: - Configure controller
-    // MARK: - Public methods
-    // MARK: - Public IBAction
-    
     // MARK: - Private methods
     
-    fileprivate func sizeForCollectionViewItem() -> CGSize {
+    /// Расчитывает размер ячейки
+    ///
+    /// - Returns: размер
+    private func sizeForCollectionViewItem() -> CGSize {
         let viewWidth = self.bounds.size.width
         let cellWidth = (viewWidth - 3 * 8) / 2.0
         let cellHeight = cellWidth * 1.5
         return CGSize(width: cellWidth, height: cellHeight)
     }
     
-    // MARK: - Private IBAction
-    // MARK: - Navigation
-
+    /// Загружает новую порцию изображений
+    private func beginBatchFetch() {
+        fetchingMore = true
+        print("begin fetching!")
+        controller.loadImages()
+        fetchingMore = false
+    }
 
 }
 
 // MARK: - UICollectionViewDataSource
 
 extension GalleryCollectionView: UICollectionViewDataSource {
+    
     func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int) -> Int {
@@ -120,6 +122,23 @@ extension GalleryCollectionView : UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 8.0
+    }
+}
+
+// MARK: - UIScrollViewDelegate
+
+extension GalleryCollectionView {
+    
+    /// Сигнализирует об окончании контента в скроллвью
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        
+        if offsetY > contentHeight - scrollView.frame.height {
+            if !fetchingMore {
+                beginBatchFetch()
+            }
+        }
     }
 }
 
