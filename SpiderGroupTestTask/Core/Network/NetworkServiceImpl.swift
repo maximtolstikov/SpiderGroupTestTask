@@ -20,11 +20,12 @@ class NetworkServiceImpl: NetworkService {
     }
     
     func request<T: Decodable>(_ request: URLRequestConvertible,
-                               completion: @escaping (T?, Error?) -> Void) {        
+                               completion: @escaping (T?, Error?) -> Void) {
+        
         sessionManager
             .request(request)
             .validate(errorParser.parse)
-            .responseData { [weak self] (response) in
+            .responseJSON { [weak self] (response) in
                 
                 if let responseError = response.error {
                     let error = self?.errorParser.parse(responseError)
@@ -33,13 +34,13 @@ class NetworkServiceImpl: NetworkService {
                 }
                 
                 do {
-                    let value = try JSONDecoder()
-                        .decode(T.self, from: response.result.value!)
+                    let value = try JSONDecoder().decode(T.self, from: response.data!)
                     completion(value, nil)
                 } catch {
                     print(error)
                     completion(nil, error)
-                }            
+                }
+                
         }
     }
     

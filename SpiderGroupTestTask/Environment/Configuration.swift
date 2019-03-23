@@ -11,5 +11,11 @@ import Foundation
 /// Конфигурация приложения.
 struct Configuration {
     
-    let baseUrl = URL(string: "http://localhost:8080/")!
+    /// Базовый url
+    let baseUrl = URL(string: "https://api.imgur.com/3/")!
+    /// Client-ID полученный при регистрации приложения в Imgur
+    let clientId = "9724ac76a72ff9d"
+    
+    /// Строковые константы
+    let galleryViewControllerTitle = "Gallery"
 }

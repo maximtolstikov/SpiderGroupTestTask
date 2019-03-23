@@ -20,8 +20,11 @@ class NetworkServiceFactory {
     lazy var commonSessionManager: SessionManager = {
         let configuration = URLSessionConfiguration.default
         configuration.httpShouldSetCookies = false
-        configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
-        let manager = SessionManager(configuration: configuration)
+        let headers: HTTPHeaders = [
+            "Authorization": "Client-ID \(Configuration().clientId)"
+        ]
+        configuration.httpAdditionalHeaders = headers
+        let manager = SessionManager(configuration: configuration)        
         return manager
     }()
     
@@ -29,5 +32,10 @@ class NetworkServiceFactory {
             errorParcer: errorParser,
             sessionManager: commonSessionManager
         )
+    
+    func makeGalleryService() -> GalleryService {
+        return GalleryServiceImpl(baseUrl: configuration.baseUrl,
+                               networkService: networkService)
+    }
     
 }
