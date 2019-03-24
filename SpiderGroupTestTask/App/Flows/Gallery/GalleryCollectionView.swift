@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Класс кллекшнВью в контроллере галлереи
 class GalleryCollectionView: UICollectionView {
 
     // MARK: - Public properties
