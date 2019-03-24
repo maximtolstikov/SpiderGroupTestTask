@@ -52,12 +52,19 @@ class GalleryViewController: UIViewController {
         service?.fetch(page: page.next(), completion: { [weak self] (items, error) in
             
             guard error == nil, let items = items else {
-                let networkError = error as! NetworkError
-                print(networkError.description)
+                print(error!.localizedDescription)
                 return
             }
             self?.galleryCollectionView.cells.append(contentsOf: items)
         })
+    }
+    
+    // MARK: - Navigation
+    
+    public func openDetailViewController(for item: GallerysItem) {
+        let controller = DetailViewController(item: item)
+        controller.networkService = NetworkServiceFactory().makeCommentsService()
+        navigationController?.pushViewController(controller, animated: true)
     }
 
 }

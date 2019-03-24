@@ -17,5 +17,4 @@ struct GallerysItem: Decodable {
         case title
         case images
     }
-
 }

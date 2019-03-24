@@ -31,6 +31,12 @@
 		94ACCDF52246009600737863 /* GalleryViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACCDF42246009600737863 /* GalleryViewControllerFactory.swift */; };
 		94ACCDFB2246131400737863 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ACCDFA2246131400737863 /* Page.swift */; };
 		94ACCDFD2246589900737863 /* GalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94ACCDFC2246589900737863 /* GalleryCollectionViewCell.xib */; };
+		94CE667822474716000FFAE2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CE667722474716000FFAE2 /* DetailViewController.swift */; };
+		94CE667A22475372000FFAE2 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CE667922475372000FFAE2 /* Comment.swift */; };
+		94CE669A22477F75000FFAE2 /* CommentsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CE669922477F75000FFAE2 /* CommentsRequest.swift */; };
+		94CE669C22478087000FFAE2 /* CommentsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CE669B22478087000FFAE2 /* CommentsResponse.swift */; };
+		94CE669F22478113000FFAE2 /* CommentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CE669E22478113000FFAE2 /* CommentsService.swift */; };
+		94CE66A52247B018000FFAE2 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CE66A42247B018000FFAE2 /* CommentView.swift */; };
 		94F685FE2242AD3000D210AB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F685FD2242AD3000D210AB /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +68,12 @@
 		94ACCDF82246105400737863 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94ACCDFA2246131400737863 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		94ACCDFC2246589900737863 /* GalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCollectionViewCell.xib; sourceTree = "<group>"; };
+		94CE667722474716000FFAE2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		94CE667922475372000FFAE2 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		94CE669922477F75000FFAE2 /* CommentsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsRequest.swift; sourceTree = "<group>"; };
+		94CE669B22478087000FFAE2 /* CommentsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsResponse.swift; sourceTree = "<group>"; };
+		94CE669E22478113000FFAE2 /* CommentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsService.swift; sourceTree = "<group>"; };
+		94CE66A42247B018000FFAE2 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		94F685FD2242AD3000D210AB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CC653F7E63B1AFAFA17AB41C /* Pods-SpiderGroupTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiderGroupTestTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpiderGroupTestTask/Pods-SpiderGroupTestTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,9 +101,10 @@
 		9461535A2243CA590080B0B7 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				9461537C2243F9CF0080B0B7 /* GalleryResponse.swift */,
+				94CE669D22478096000FFAE2 /* Responses */,
 				9461537E2243FADA0080B0B7 /* Image.swift */,
 				946153802245031C0080B0B7 /* GallerysItem.swift */,
+				94CE667922475372000FFAE2 /* Comment.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -138,6 +151,7 @@
 		946153772243E8390080B0B7 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				94CE669922477F75000FFAE2 /* CommentsRequest.swift */,
 				946153782243E8CF0080B0B7 /* GalleryRequest.swift */,
 			);
 			path = Requests;
@@ -146,6 +160,7 @@
 		94615382224509420080B0B7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				94CE669E22478113000FFAE2 /* CommentsService.swift */,
 				94615383224509990080B0B7 /* GalleryService.swift */,
 			);
 			path = Services;
@@ -190,6 +205,24 @@
 				94ACCDFC2246589900737863 /* GalleryCollectionViewCell.xib */,
 			);
 			path = Gallery;
+			sourceTree = "<group>";
+		};
+		94CE66762247469A000FFAE2 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				94CE667722474716000FFAE2 /* DetailViewController.swift */,
+				94CE66A42247B018000FFAE2 /* CommentView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		94CE669D22478096000FFAE2 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				9461537C2243F9CF0080B0B7 /* GalleryResponse.swift */,
+				94CE669B22478087000FFAE2 /* CommentsResponse.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 		94F685F62242A78F00D210AB /* App */ = {
@@ -243,6 +276,7 @@
 		94F685FB2242A84700D210AB /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				94CE66762247469A000FFAE2 /* Detail */,
 				94ACCDF32245FC3200737863 /* Gallery */,
 			);
 			path = Flows;
@@ -386,18 +420,24 @@
 				946153682243D5E00080B0B7 /* NetworkError.swift in Sources */,
 				946153602243D5800080B0B7 /* ErrorParser.swift in Sources */,
 				94ACCDFB2246131400737863 /* Page.swift in Sources */,
+				94CE667822474716000FFAE2 /* DetailViewController.swift in Sources */,
 				946153612243D5800080B0B7 /* NetworkService.swift in Sources */,
 				94ACCDEE2245F59F00737863 /* GalleryViewController.swift in Sources */,
+				94CE667A22475372000FFAE2 /* Comment.swift in Sources */,
 				94ACCDF22245FC2800737863 /* GalleryCollectionViewCell.swift in Sources */,
 				94615384224509990080B0B7 /* GalleryService.swift in Sources */,
 				94ACCDF52246009600737863 /* GalleryViewControllerFactory.swift in Sources */,
 				946153632243D5800080B0B7 /* RequestRouter.swift in Sources */,
+				94CE66A52247B018000FFAE2 /* CommentView.swift in Sources */,
+				94CE669C22478087000FFAE2 /* CommentsResponse.swift in Sources */,
 				9461537F2243FADA0080B0B7 /* Image.swift in Sources */,
+				94CE669F22478113000FFAE2 /* CommentsService.swift in Sources */,
 				946153812245031C0080B0B7 /* GallerysItem.swift in Sources */,
 				946153722243DE340080B0B7 /* NetworkServiceFactory.swift in Sources */,
 				946153622243D5800080B0B7 /* NetworkServiceImpl.swift in Sources */,
 				94AA61732242855F007C5599 /* AppDelegate.swift in Sources */,
 				946153792243E8CF0080B0B7 /* GalleryRequest.swift in Sources */,
+				94CE669A22477F75000FFAE2 /* CommentsRequest.swift in Sources */,
 				9461537D2243F9CF0080B0B7 /* GalleryResponse.swift in Sources */,
 				9461537B2243E9EF0080B0B7 /* RequestRouterEncoding.swift in Sources */,
 			);

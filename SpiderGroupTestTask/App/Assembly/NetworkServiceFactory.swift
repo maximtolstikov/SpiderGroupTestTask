@@ -9,7 +9,7 @@
 import Alamofire
 
 /**
- Фабрика сервисов сетевых запросов. Здесь настраивается SessionManager.
+ Фабрика сервисов сетевых запросов. Здесь настраивается SessionManager
  */
 
 class NetworkServiceFactory {
@@ -36,6 +36,11 @@ class NetworkServiceFactory {
     func makeGalleryService() -> GalleryService {
         return GalleryServiceImpl(baseUrl: configuration.baseUrl,
                                networkService: networkService)
+    }
+    
+    func makeCommentsService() -> CommentsService {
+        return CommentsServiceImpl(baseUrl: configuration.baseUrl,
+                                  networkService: networkService)
     }
     
 }

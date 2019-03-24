@@ -33,7 +33,7 @@ class GalleryServiceImpl: GalleryService {
     }
     
     
-    /// Отправляет запрос на получение данных галлереи
+    /// Запрашивает данные галлереи
     ///
     /// - Parameters:
     ///   - page: номер страницы

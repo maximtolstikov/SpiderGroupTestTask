@@ -91,6 +91,12 @@ extension GalleryCollectionView: UICollectionViewDataSource {
 
 extension GalleryCollectionView: UICollectionViewDelegate {
     
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didSelectItemAt indexPath: IndexPath) {
+        let item = cells[indexPath.row]
+        controller.openDetailViewController(for: item)
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout

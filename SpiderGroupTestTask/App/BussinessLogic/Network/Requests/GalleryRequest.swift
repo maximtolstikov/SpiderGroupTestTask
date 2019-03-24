@@ -17,8 +17,7 @@ struct GalleryRequest: RequestRouter {
     let encoding: RequestRouterEncoding = .url
     let method: HTTPMethod = .get
     var path: String {
-        return "gallery/top/" + "\(page)"
+        return "gallery/hot/viral/" + "\(page)"
     }
-    var parameters: Parameters?
-    
+    var parameters: Parameters?    
 }
