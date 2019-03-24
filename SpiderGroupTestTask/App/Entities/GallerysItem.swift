@@ -6,6 +6,7 @@
 //  Copyright © 2019 Maxim Tolstikov. All rights reserved.
 //
 
+/// Модель компонента галлереи
 struct GallerysItem: Decodable {
     
     let id: String

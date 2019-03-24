@@ -6,6 +6,7 @@
 //  Copyright © 2019 Maxim Tolstikov. All rights reserved.
 //
 
+/// Модель изображения
 struct Image: Codable {
     
     let id: String

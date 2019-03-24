@@ -6,6 +6,7 @@
 //  Copyright © 2019 Maxim Tolstikov. All rights reserved.
 //
 
+/// Ответ на сетевой запрос данных галлереи
 struct GalleryResponse: Decodable {
     
     let data: [GallerysItem]
